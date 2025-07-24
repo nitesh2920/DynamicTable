@@ -71,6 +71,11 @@ const handleRowCountSubmit = async () => {
   overlayRef.current?.hide();
 };
 
+const loader=()=>(
+  <div className="flex justify-center items-center h-screen">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border "></div>
+  </div>
+)
 
   const HeaderIcons = () => (
     <div style={{ textAlign: 'center', padding: '.5rem' }}>
@@ -129,7 +134,7 @@ const handleRowCountSubmit = async () => {
   onPage={handlePageChange}
   header={null}
   className="shadow-lg rounded-lg overflow-hidden border border-gray-200"
-  emptyMessage="No Data to Show"
+  emptyMessage={loader}
 
 >
   <Column
