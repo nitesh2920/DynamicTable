@@ -129,7 +129,7 @@ const loader=()=>(
   lazy
   dataKey="id"
   selection={selectedRecords}
-  onSelectionChange={e=> setSelectedRecords(e.value)}
+  onSelectionChange={e => setSelectedRecords(e.value)}
   selectionMode="multiple"
   onPage={handlePageChange}
   header={null}
