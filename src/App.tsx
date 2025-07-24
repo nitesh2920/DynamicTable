@@ -81,7 +81,7 @@ const App: React.FC = () => {
   );
 
   const HeaderIcons = () => (
-    <div className="text-left  absolute top-[20px] px-1 left-[28px] sm:top-[10px] sm:left-[30px] ">
+    <div className="text-left  absolute top-[20px] px-1 left-[28px] sm:top-[20px] sm:left-[30px] ">
       <Button
         icon={<FaAngleDown size={20} />}
         tooltip="Set selected rows"
