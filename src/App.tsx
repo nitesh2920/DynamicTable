@@ -25,7 +25,7 @@ const App: React.FC = () => {
   const [records, setRecords] = useState<TableDataProp[]>([]);
   const [selectedRecords, setSelectedRecords] = useState<TableDataProp[]>([]);
   const [currentPageStart, setCurrentPageStart] = useState(0);
-  const [totalCount, setTotalCount] = useState(0);
+  const [totalCount, setTotalCount] = useState<number>(0);
   const [inputRows, setInputRows] = useState('');
  
 
@@ -107,7 +107,7 @@ const loader=()=>(
       <InputText
         placeholder="Number of rows..."
         value={inputRows}
-        onChange={e => setInputRows(e.target.value)}
+        onChange={(e)=> setInputRows(e.target.value)}
         inputMode="numeric"
         aria-label="Number of rows to select"
         className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
@@ -129,7 +129,7 @@ const loader=()=>(
   lazy
   dataKey="id"
   selection={selectedRecords}
-  onSelectionChange={e => setSelectedRecords(e.value)}
+  onSelectionChange={e=> setSelectedRecords(e.value)}
   selectionMode="multiple"
   onPage={handlePageChange}
   header={null}
